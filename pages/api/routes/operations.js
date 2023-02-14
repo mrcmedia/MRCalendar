@@ -94,10 +94,12 @@ router.post('/create-event', async (req,res) => {
                 location:location,
                 description:bas64Description,
                 start:{
-                    dateTime:new Date(startDate)
+                    dateTime:new Date(startDate),
+                    timeZone:"Asia/Colombo"
                 },
                 end:{
-                    dateTime:new Date(endDate)
+                    dateTime:new Date(endDate),
+                    timeZone:"Asia/Colombo"
                 },
                 colorId:Math.floor(Math.random() * 12),
             }
@@ -159,10 +161,12 @@ router.post('/create-birthday', async (req,res) => {
                 location:location,
                 description:bas64Description,
                 start:{
-                    dateTime:new Date(Date.parse(startDate))
+                    dateTime:new Date(Date.parse(startDate)),
+                    timeZone:"Asia/Colombo"
                 },
                 end:{
-                    dateTime:new Date(Date.parse(endDate))
+                    dateTime:new Date(Date.parse(endDate)),
+                    timeZone:"Asia/Colombo"
                 },
                 colorId:Math.floor(Math.random() * 12)
             }
