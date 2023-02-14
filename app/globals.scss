@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media only screen and (min-width:640px)
+{
+    ::-webkit-scrollbar{
+        width: 2px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: white; 
+        
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: lightgray; 
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+}
+
+
+.not-open{
+    flex: 0;
+    width: 0%;
+    transition: 500ms;
+}
+
+.active{
+    flex: 0.2;
+}
+
+.mobile-menu{
+    right: 100%;
+    transition: 0.3s;
+    flex: 0;
+}
+
+.mobile-menu.mbac{
+    right: 0;
+}
+
+.delete-popup{
+    scale: 0;
+    transition: 300ms;
+}
+
+.delete-popup.activepop{
+    scale: 1;
+}
